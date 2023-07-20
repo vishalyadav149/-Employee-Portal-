@@ -24,7 +24,7 @@ let emp_id = [];
       
     
       const nameInput = document.getElementById("nameInput").value;
-      const nameRegex = /^[A-Za-z]+$/;
+      const nameRegex = /^[A-Za-z\s]+$/;
     
       if (!nameRegex.test(nameInput)) {
         document.getElementById("nameerror").innerHTML = "Name must contain only alphabets.";
