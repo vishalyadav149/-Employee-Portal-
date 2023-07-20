@@ -72,6 +72,7 @@ let emp_id = [];
         document.getElementById("photoerror").innerHTML = "";
       }
 
+
 return t;
     }
     
@@ -126,7 +127,7 @@ return t;
         const employeeList = document.getElementById('table_list');
         employeeList.innerHTML = '';
     
-        emp_data.forEach((employee, index) => {
+        emp_data.forEach((employee) => {
             const row = document.createElement('tr');
             row.innerHTML = `
               <td>${employee.userId}</td>
@@ -220,4 +221,31 @@ function viewData(id) {
 
 function cancelDetails(){
   document.querySelector('.view').style.display = 'none';
+}
+
+
+
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    for (j = 0; j < tr.length; j++) {
+    td = tr[i].getElementsByTagName("td")[j];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        break;
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+  }
 }

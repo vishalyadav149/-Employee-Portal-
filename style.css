@@ -114,12 +114,12 @@ header{
 
 #btn{
     padding: 6px;
-
-    margin: 40px;
+    /* margin: 20px; */
+    margin-left: 60px;
+    margin-bottom: 40px;
     border-radius: 12px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
-    border-radius: 12px;
     outline: none;
     border-width: 0.5px;
     border-color: antiquewhite;
@@ -137,6 +137,7 @@ marquee{
     /* margin: 0px 2px; */
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 80%;
 }
 
 
@@ -276,6 +277,32 @@ border-radius: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
     border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    width: 130px;
+    font-size: 15px; 
+    border: 2px solid greenyellow;
+}
+
+#searchId{
+    width: 160px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+
+#search_btn{
+    padding: 6px;
+    margin: 40px;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
     outline: none;
     border-width: 0.5px;
     border-color: antiquewhite;

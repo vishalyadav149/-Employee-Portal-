@@ -52,11 +52,14 @@
             <input type="text" id="photoInput" name="photoInput">
             <div id="photoerror"></div>
         </div>
-        <button id="btn" onclick="Submit()">Add Employee</button>
+
+        <div class="boxes">
+        <label for="searchId">Search Employee ID:</label>
+        <input type="text" id="myInput" onkeyup="myFunction()" name="searchId">
+        </div>
     </form>
-    <marquee behavior="scroll" direction="left">Welcome to Sankey Solution</marquee>
-    
-    <table class="table_data">
+    <marquee behavior="scroll" direction="left">Welcome to Sankey Solution</marquee><span> <button id="btn" onclick="Submit()">Add Employee</button></span>
+    <table class="table_data" id="myTable">
         <thead>
             <tr>
                 <th>ID</th>
