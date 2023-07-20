@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Employee Portal</h1>
+    </header>
+    <form class="from_fields">
+        <div class="boxes">
+            <label for="idInput">ID:</label>
+            <input type="text" id="idInput" name="id">
+            <div id="iderror"></div>
+        </div>
+        <div class="boxes">
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" name="name">
+            <div id="nameerror"></div>
+        </div>
+        <div class="boxes">
+            <label for="ageInput">Age:</label>
+            <input type="text" id="ageInput" name="age">
+            <div id="ageerror"></div>
+        </div>
+        <div class="boxes">
+            <label for="genderInput">Gender:</label>
+            <select id="genderInput" name="gender">
+                <option value="Select Gender">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <div id="gendererror"></div>
+        </div>
+        <div class="boxes">
+            <label for="designation">Designation:</label>
+            <select id="desigInput" name="designation">
+                <option value="Select Designation">Select Designation</option>
+                <option value="manager">Manager</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+            </select>
+            <div id="desigerror"></div>
+        </div>
+        <div class="boxes">
+            <label for="photoInput">Self Photo:</label>
+            <input type="text" id="photoInput" name="photoInput">
+            <div id="photoerror"></div>
+        </div>
+        <button id="btn" onclick="Submit()">Add Employee</button>
+    </form>
+    <marquee behavior="scroll" direction="left">Welcome to Sankey Solution</marquee>
+    
+    <table class="table_data">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Designation</th>
+                <!-- <th>Self Photo</th> -->
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="table_list">
+
+        </tbody>
+    </table>
+
+    <div class="model">
+        <div class="edit_data">
+                <div class="edit_box">
+                <label for="idedit">ID:</label>
+                <input type="text" id="idedit" name="id" disabled>
+                <div id="iderror"></div>
+                </div>
+           
+                <div class="edit_box"> 
+                <label for="nameEdit">Name:</label>
+                <input type="text" id="nameEdit" name="name">
+                <div id="nameerror"></div>
+                </div>
+           
+                <div class="edit_box">
+                <label for="ageEdit">Age:</label>
+                <input type="text" id="ageEdit" name="age">
+                </div>
+           
+                <div class="edit_box">
+                <label for="genderEdit">Gender:</label>
+                <select id="genderEdit" name="gender">
+                    <option value="Select Gender">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="edit_box">
+                <label for="desigEdit">Designation:</label>
+                <select id="desigEdit" name="designation">
+                    <option value="Select Designation">Select Designation</option>
+                    <option value="manager">Manager</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                </select>
+                </div>
+           
+                <div class="edit_box">
+                <label for="photoEdit">Self Photo:</label>
+                <input type="text" id="photoEdit" name="photoInput">
+                <div id="photoerror"></div>
+                </div>
+                <div class="edit_box">
+                <button id="editBtn" onclick="updateDetails()">Update</button>
+                </div>
+        </div>
+    </div>
+    
+    <div class="view">
+        <div class="view_data">
+                <h2>Entered Details</h2>
+                <div class="view_box">
+                <img id="viewImage" src="" alt="Employee image">
+                </div>
+
+                <div class="view_box">
+                    <p><strong>ID:</strong> <span id="viewId"></span></p>
+                </div>
+           
+                <div class="view_box"> 
+                    <p><strong>Name:</strong> <span id="viewName"></span></p>
+                </div>
+           
+                <div class="view_box">
+                    <p><strong>Age:</strong> <span id="viewAge"></span></p>
+                </div>
+           
+                <div class="view_box">
+                    <p><strong>Gender:</strong> <span id="viewGender"></span></p>  
+                </div>
+
+                <div class="view_box">
+                    <p><strong>Designation:</strong> <span id="viewDesig"></span></p>
+                </div>
+
+                <button id="cancelBtn" onclick="cancelDetails()">Cancel</button>
+        </div>
+    </div>
+      
+      
+      
+<footer> <p>&copy; 2023 Your Website. All rights reserved.</p></footer>
+      
+<script src="script1.js"></script>
+<!-- <script src="script.js"></script> -->
+</body>
+</html>

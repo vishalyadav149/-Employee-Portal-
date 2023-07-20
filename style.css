@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    background: url("bg_img.jpg") no-repeat center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    background-color: rgb(251, 79, 79);
+    height: 50px;
+    text-align: center;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 5px;
+}
+
+
+
+.from_fields{
+    display: flex;
+    /* border: 2px solid blue; */
+    background-color: skyblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* border: 2px solid red; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+
+#idInput{
+    width: 80px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+#nameInput{
+    width: 180px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+#ageInput{
+    width: 80px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+
+#genderInput{
+    width: 160px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+
+#desigInput{
+    width: 160px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+#photoInput{
+    width: 160px;
+    margin: 5px 0px;
+    padding: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+
+
+
+#btn{
+    padding: 6px;
+
+    margin: 40px;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    width: 130px;
+    font-size: 15px; 
+    border: 2px solid greenyellow;
+
+}
+
+marquee{
+    border: 1px solid red;
+    background-color: rgb(251, 242, 72);
+    color: rgb(248, 87, 23);
+    padding: 10px;
+    /* margin: 0px 2px; */
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.table_data{
+    
+    padding: 5px;
+    border: 1px solid red;
+    background-color: silver;
+    font-size: 20px;
+}
+
+table{
+    /* border: 2px solid red; */
+    margin: 50px auto;
+    
+}
+
+
+thead{
+    background-color: rgb(14, 173, 241);
+    color: white;
+    margin: auto;
+}
+
+th{
+   padding: 10px 50px;
+}
+
+tbody{
+  background-color: whitesmoke;
+  
+}
+
+tbody tr td{
+    text-align: center;
+    padding: 10px 0px;
+
+}
+
+#iderror{
+    font-size: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2px;
+    /* position: fixed;
+    padding-top: 60px; */
+  
+    /* border: 2px solid black; */
+}
+#nameerror{
+    font-size: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2px;
+    /* position: fixed;
+    padding-top: 60px; */
+}
+#ageerror{
+    font-size: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: fixed;
+    padding-top: 60px; */
+}
+#photoerror{
+    font-size: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: fixed;
+    padding-top: 60px; */
+}
+#gendererror{
+    font-size: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: fixed;
+    padding-top: 60px; */
+}
+#desigerror{
+    font-size: 10px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: fixed;
+    padding-top: 60px; */
+}
+
+
+.model{
+width: 25%;
+position: fixed;
+top: 50%;
+left: 50%;
+height: 500px;
+background-color: orange;
+transform: translate(-50%, -50%);
+display: none;
+border-radius: 20px;
+}
+
+.edit_data{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px;
+}
+
+.edit_box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+}
+
+.edit_box input{
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+}
+
+#genderEdit{
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+}
+#desigEdit{
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+}
+
+#editBtn{
+    padding: 6px;
+    margin: 40px;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 12px;
+    outline: none;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    width: 130px;
+    font-size: 15px; 
+    border: 2px solid greenyellow;
+}
+
+.view{
+    width: 25%;
+position: fixed;
+top: 50%;
+left: 50%;
+height: 500px;
+background-color: silver;
+transform: translate(-50%, -50%);
+display: none;
+border-radius: 20px;
+    }
+
+    .view_data{
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin: 30px;
+    }
+
+    .view_box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .view_box input{
+        width: 100%;
+        padding: 4px;
+        text-align: center;
+        border: none;
+        outline: none;
+    }
+
+    #viewGender{
+        width: 100%;
+        padding: 4px;
+        text-align: center;
+    }
+    #viewDesig{
+        width: 100%;
+        padding: 4px;
+        text-align: center;
+    }
+
+    #cancelBtn{
+        padding: 6px;
+        margin: 40px;
+        border-radius: 12px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        cursor: pointer;
+        border-radius: 12px;
+        outline: none;
+        border-width: 0.5px;
+        border-color: antiquewhite;
+        width: 130px;
+        font-size: 15px; 
+        border: 2px solid greenyellow;
+    }
+
+#viewImage{
+    width: 160px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.view_box strong{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+    font-size: 20px;
+}
+
+.view_box span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-family: Arial Narrow Bold, sans-serif;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#editbtn_1{
+    padding: 2px;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    background-color: aquamarine;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    width: 50px;
+    font-size: 15px; 
+    border: 2px solid greenyellow;
+}
+#deletebtn_1{
+    padding: 2px;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    background-color: aquamarine;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    width: 60px;
+    font-size: 15px; 
+    border: 2px solid greenyellow;
+}
+#viewbtn_1{
+    padding: 2px;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    background-color: aquamarine;
+    border-width: 0.5px;
+    border-color: antiquewhite;
+    width: 50px;
+    font-size: 15px; 
+    border: 2px solid greenyellow;
+}
+
+    @media screen and (max-width: 1038px){
+        .from_fields{
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid blue; */
+            background-color: rgb(10, 184, 219);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        .boxes{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            /* border: 2px solid red; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        #btn{
+            padding: 6px;
+        
+            margin: auto;
+            border-radius: 12px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            cursor: pointer;
+            border-radius: 12px;
+            outline: none;
+            border-width: 0.5px;
+            border-color: antiquewhite;
+            width: 130px;
+            font-size: 15px; 
+            border: 2px solid greenyellow;
+        
+        }
+
+    }
