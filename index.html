@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Employee Portal</title>
 </head>
 <body>
     <header>
@@ -55,10 +55,14 @@
 
         <div class="boxes">
         <label for="searchId">Search Employee ID:</label>
-        <input type="text" id="myInput" onkeyup="myFunction()" name="searchId">
+        <input type="text" id="myInput" onkeyup="myFunction()" name="searchId" style="border: none; outline: none; padding: 4px;">
         </div>
     </form>
-    <marquee behavior="scroll" direction="left">Welcome to Sankey Solution</marquee><span> <button id="btn" onclick="Submit()">Add Employee</button></span>
+    <div class="marquee_box">
+    <marquee behavior="scroll" direction="left">Welcome to Sankey Solution</marquee>
+    <button id="btn" onclick="Submit()">Add Employee</button>
+    </div>
+
     <table class="table_data" id="myTable">
         <thead>
             <tr>
@@ -81,18 +85,19 @@
                 <div class="edit_box">
                 <label for="idedit">ID:</label>
                 <input type="text" id="idedit" name="id" disabled>
-                <div id="iderror"></div>
+                <div id="editiderror"></div>
                 </div>
            
                 <div class="edit_box"> 
                 <label for="nameEdit">Name:</label>
                 <input type="text" id="nameEdit" name="name">
-                <div id="nameerror"></div>
+                <div id="editnameerror"></div>
                 </div>
            
                 <div class="edit_box">
                 <label for="ageEdit">Age:</label>
                 <input type="text" id="ageEdit" name="age">
+                <div id="editageerror"></div>
                 </div>
            
                 <div class="edit_box">
@@ -103,6 +108,7 @@
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                   </select>
+                  <div id="editgendererror"></div>
                 </div>
 
                 <div class="edit_box">
@@ -113,12 +119,13 @@
                     <option value="developer">Developer</option>
                     <option value="designer">Designer</option>
                 </select>
+                <div id="editdesigerror"></div>
                 </div>
            
                 <div class="edit_box">
                 <label for="photoEdit">Self Photo:</label>
                 <input type="text" id="photoEdit" name="photoInput">
-                <div id="photoerror"></div>
+                <div id="editphotoerror"></div>
                 </div>
                 <div class="edit_box">
                 <button id="editBtn" onclick="updateDetails()">Update</button>

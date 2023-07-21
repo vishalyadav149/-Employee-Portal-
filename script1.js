@@ -24,7 +24,7 @@ let emp_id = [];
       
     
       const nameInput = document.getElementById("nameInput").value;
-      const nameRegex = /^[A-Za-z]+$/;
+      const nameRegex = /^[A-Za-z\s]+$/;
     
       if (!nameRegex.test(nameInput)) {
         document.getElementById("nameerror").innerHTML = "Name must contain only alphabets.";
@@ -75,6 +75,10 @@ let emp_id = [];
 
 return t;
     }
+
+   
+
+
     
     function Submit() {
       event.preventDefault();
@@ -165,11 +169,71 @@ return t;
         document.getElementById('photoEdit').value = employee.userPhoto;
     
         document.querySelector('.model').style.display = 'block';
-      }
+    }
 
 
+    function editValidation(){
+      console.log(" i am in eidt valisation");
+         t = true;
+        const nameInput = document.getElementById("nameEdit").value;
+        const nameRegex = /^[A-Za-z\s]+$/;
+      
+        if (!nameRegex.test(nameInput)) {
+          document.getElementById("editnameerror").innerHTML = "Name must contain only alphabets.";
+          t=false;
+        } else {
+          document.getElementById("editnameerror").innerHTML = "";
+        }
+      
+        const ageInput = document.getElementById("ageEdit").value;
+        const ageValue = parseInt(ageInput);
+      
+        if (isNaN(ageValue) || ageValue < 18 || ageValue > 60) {
+          document.getElementById("editageerror").innerHTML= "Age must be between 18 and 60.";
+          t=false;
+        } else {
+          document.getElementById("editageerror").innerHTML = "";
+        }
+      
+      
+        const genderInput = document.getElementById("genderEdit").value;
+      
+        if (genderInput === "Select Gender") {
+          document.getElementById("editgendererror").innerHTML = "Please select a gender.";
+          t=false;
+        } else {
+          document.getElementById("editgendererror").innerHTML = "";
+        }
+      
+        const desigInput = document.getElementById("desigEdit").value;
+      
+        if (desigInput === "Select Designation") {
+          document.getElementById("editdesigerror").innerHTML = "Please select a designation.";
+          t=false;
+        } else {
+          document.getElementById("editdesigerror").innerHTML = "";
+        }
+      
+        const photoInput = document.getElementById("photoEdit").value;
+      
+      
+        if (!photoInput.trim()) {
+          document.getElementById("editphotoerror").innerHTML = "Self Photo URL cannot be empty.";
+          t=false;
+        } else {
+          document.getElementById("editphotoerror").innerHTML = "";
+        }
+        
+        return t;
+    }
     
-    function updateDetails() {
+    function updateDetails() { 
+      console.log("i am in update detsils");
+
+      if(editValidation()){
+        
+        console.log("i am in validation details");
+
         let id = document.getElementById('idedit').value;
         let employeeIndex = emp_data.findIndex((e) => parseInt(e.userId) === parseInt(id));
       
@@ -187,8 +251,11 @@ return t;
 
         document.querySelector('.model').style.display = 'none';
 
+        console.log("i am in showing detsils");
+
         showData();
-        
+      }
+      
     }      
     
     
@@ -225,21 +292,21 @@ function cancelDetails(){
 
 
 
-function myFunction() {
+function myFunction() {  // "vishal"
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
+  filter = input.value.toUpperCase();  //S
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
-    for (j = 0; j < tr.length; j++) {
+    for (j = 0; j < 5; j++) {
     td = tr[i].getElementsByTagName("td")[j];
     if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      txtValue = td.textContent || td.innerText; // vishal
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {  //VISHAL.indexof(S) 2>-1
         tr[i].style.display = "";
         break;
       } else {
